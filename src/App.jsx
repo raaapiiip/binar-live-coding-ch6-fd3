@@ -3,7 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import NavbarWithStyling from "./components/navbar/NavbarWithStyling";
-import Navbar from "./components/navbar/Navbar";
+import HoverButton from "./components/button/HoverButton";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -11,24 +11,25 @@ function App() {
 
   return (
     <>
-    <Navbar/>
       <NavbarWithStyling
         menu={listMenu}
-        name="Rafif"
-        age="20"
+        name="RAFIF"
+        age="21"
         address="Semarang"
       />
-      <NavbarWithStyling
-        name="Farrel"
-        age="20"
-        address="Kalimantan"
-      />
+      <NavbarWithStyling 
+        name="FARREL" 
+        age="22" 
+        address="Kalimantan" />
       <NavbarWithStyling
         menu={["Tentang Saya", "Tentang Kamu", "Tentang Dia"]}
-        name="Agil"
+        name="AGIL"
         age="21"
         address="Salatiga"
       />
+      <HoverButton>
+        <p>HOVER BUTTON CHILDREN</p>
+      </HoverButton>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
